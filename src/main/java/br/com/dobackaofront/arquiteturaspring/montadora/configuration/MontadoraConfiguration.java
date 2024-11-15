@@ -4,10 +4,12 @@ import br.com.dobackaofront.arquiteturaspring.montadora.Motor;
 import br.com.dobackaofront.arquiteturaspring.montadora.TipoMotor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class MontadoraConfiguration {
     @Bean(name = "motorAspirado")
+    @Primary
     public Motor motorAspirado() {
         var motor = new Motor();
         motor.setCavalos(120);
